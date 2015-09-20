@@ -1,0 +1,9 @@
+{%extends "template.html"%}
+{%block content1%}
+<h2>Wecome to the login page</h2>
+<form action="" method="POST">
+<strong>Login:</strong><input name="login" type="text" value="{{request.form.login}}">
+<strong>Pass:</strong><input name="password" type="text" value="{{request.form.password}}">
+<input type="submit" value="Save">
+</form>
+{%endblock%}

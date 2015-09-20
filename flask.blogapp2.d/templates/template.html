@@ -1,0 +1,21 @@
+<html>
+	<head>
+	<h1>Welcome to Blog!</h1>
+	</head>
+
+	<body>
+	{%block content1%}
+
+	{%endblock%}
+
+	{%for message in get_flashed_messages()%}
+		<div class="flashed">{{message}}</div>
+	{%endfor%}
+
+	{%if error%}
+	<strong>Error:</strong><p>{{error}}</p>
+	{%endif%}
+	</body>
+	
+
+</html>

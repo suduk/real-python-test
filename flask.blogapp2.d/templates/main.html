@@ -1,0 +1,21 @@
+{%extends "template.html"%}
+{%block content1%}
+<h2>Welcome to the Blog (main page)</h2>
+<form action="{{url_for('add')}}" method="post" class="add">
+	<label><strong>Title:</strong></label><input name="title" type="text">
+	<p>
+	<label><strong>Post:</strong></label><br>
+
+
+	<textarea name="post" rows"5" cols="40"></textarea></p>
+	<input class="button" type="submit" value="Save"></form><br><br>
+
+
+
+
+<a href="/logout">Logout</a><br/>
+{%for p in data_db%}
+<Strong>Title:</Strong> {{p.title}} <br/>
+<Strong>Post:</Strong> {{p.post}}<br/>
+{%endfor%}
+{%endblock%}
